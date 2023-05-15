@@ -50,9 +50,7 @@ export default component$(() => {
 });
 
 export const getWords = server$(async function (input) {
-  const url = `${this.env.get("API_PRIVATE_URL")}/wordforms?word=${
-    input.value
-  }`;
+  const url = `${import.meta.env.PUBLIC_API_URL}/wordforms?word=${input.value}`;
   const response = await fetch(url);
   const responseData = await response.json();
   return responseData.wordForms;
