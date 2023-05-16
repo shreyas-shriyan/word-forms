@@ -1,6 +1,4 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
 
 // elements
 const searchText = document.querySelector("#input");
@@ -17,6 +15,6 @@ async function handleSearchButton(e) {
     searchText.value
   }`;
   const response = await fetch(url);
-  const responseData = await response.json().wordForms;
-  alternateWords.value = responseData || "";
+  const responseData = await response.json();
+  alternateWords.innerHTML = responseData.wordForms || "";
 }
