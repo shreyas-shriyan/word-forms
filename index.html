@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="flex flex-col h-screen justify-center items-center">
-      <p class="mb-36 font-extrabold text-8xl">Word Forms</p>
+      <p class="mb-36 font-extrabold text-8xl text-center">Word Forms</p>
       <Form class="form-control">
         <div class="input-group">
           <input
@@ -17,7 +17,6 @@
             type="text"
             placeholder="Enter the word"
             class="input input-bordered"
-            bind:value={input}
           />
           <button id="searchButton" aria-label="submit button" type="submit" class="btn btn-square">
             <svg
@@ -37,7 +36,7 @@
           </button>
         </div>
       </Form>
-      <p id="alternateWords" class="mt-28 font-bold text-lg"></p>
+      <p id="alternateWords" class="mt-20 font-bold text-lg px-4"></p>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
